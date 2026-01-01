@@ -1,0 +1,74 @@
+---
+---
+
+@import "minima";
+
+/* Use Kaiti/Kai only when you explicitly mark it */
+.kaiti {
+  font-family:
+    "STKaiti",     /* macOS (often works better in Safari) */
+    "Kaiti SC",
+    "KaiTi",       /* Windows */
+    "AR PL UKai CN",
+    serif;
+  font-style: normal;
+}
+
+
+:lang(zh) {
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+
+:root { --nav-height: 8rem; }
+
+/* Put image + nav on one line, vertically centered */
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Header image behaves like a logo block (doesn't steal all width) */
+.site-header-image {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  min-height: var(--nav-height);
+}
+
+.site-header-image img {
+  height: var(--nav-height);
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* Nav keeps Minima behaviour, but participates in flex layout */
+.site-nav {
+  flex: 1 1 auto;
+  display: flex;              /* OK: nav container can be flex */
+  align-items: center;
+  justify-content: flex-end;
+  min-height: var(--nav-height);
+}
+
+/* Keep the hamburger + trigger aligned */
+.site-nav .trigger {
+  margin-left: 1rem;
+}
+
+.name-inline {
+  margin-bottom: 1rem;
+}
+
+.name-divider {
+  margin: 0 0.1em;
+  color: #aaa;
+}
+
+.name-en {
+  letter-spacing: 0em;
+}
